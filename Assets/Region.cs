@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Region : MonoBehaviour
 {
+
+    public SpriteRenderer spriteRenderer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -11,9 +15,14 @@ public class Region : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void OnMouseEnter()
     {
-        var worldMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(worldMousePosition);
+        spriteRenderer.color = Color.red;
+        Debug.Log("Mouse Over");    
+    }
+
+    private void OnMouseExit()
+    {
+        spriteRenderer.color = Color.white;
     }
 }
