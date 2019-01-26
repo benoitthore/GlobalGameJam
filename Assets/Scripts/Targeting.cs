@@ -5,19 +5,41 @@ using UnityEngine;
 public abstract class Targeting : MonoBehaviour
 {
     public float rotationSpeed = 1f;
-    
-    public bool isPoitingAtTarget()
+
+    public bool isPointingAtTarget()
     {
+        var target = getTarget();
+        if (target)
+        {
+//            Vector2 from  = transform.position;
+//            Vector2 to = target.transform.position;
+//            Vector2 direction = new Vector2(from.x - to.x, from.y - to.y);
+
+
+            Vector3 lookDir = target.transform.position - transform.position;
+ 
+            Vector3 myDir = transform.up;
+ 
+            float myAngle = Vector3.Angle(myDir, lookDir);
+ 
+            Debug.Log(myAngle);
+            if (myAngle < 5.0f)
+            {
+                return true;
+            }
+        }
+
+        
         return false;
     }
 
-    public abstract GameObject getTarget();  
-
+    public abstract GameObject getTarget();
 
 
     private void Update()
     {
         var target = getTarget();
+        isPointingAtTarget();
 
         if (target)
         {
@@ -40,8 +62,8 @@ public abstract class Targeting : MonoBehaviour
 
         transform.transform.up = Vector2.Lerp(from, to, Time.deltaTime * rotationSpeed);
     }
-    
-    
+
+
     private void resetRotation()
     {
         var from = transform.transform.up;
