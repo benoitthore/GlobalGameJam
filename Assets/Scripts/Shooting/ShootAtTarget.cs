@@ -6,32 +6,15 @@ public class ShootAtTarget : MonoBehaviour
 {
     public float shootingDistance = 7f;
     public GameObject bulletPrefab;
-    public Transform firePoint;
     public float shotsPerSecond = 1f;
 
     private bool canShoot = true;
 
     public bool isPlayerObject;
 
-
-    private void Awake()
+    private string[] getBulletColliders()
     {
-        if (isPlayerObject)
-        {
-            bulletPrefab.GetComponent<Bullet>().collideWith = GameController.instance.tagEnemyFilter;
-        }
-        else
-        {
-            bulletPrefab.GetComponent<Bullet>().collideWith = GameController.instance.tagPlayerFilter;
-        }
-    }
-
-    private void Start()
-    {
-        if (!firePoint)
-        {
-            firePoint = transform;
-        }
+        return isPlayerObject ? GameController.instance.tagEnemyFilter : GameController.instance.tagPlayerFilter;
     }
 
     private void Update()
@@ -50,12 +33,13 @@ public class ShootAtTarget : MonoBehaviour
 
     void shoot(Transform target)
     {
-        Vector2 from = firePoint.position;
+        Vector2 from = transform.position;
         Vector2 to = target.transform.position;
         var direction = new Vector2(from.x - to.x, from.y - to.y);
 
 
-        var bullet = Instantiate(bulletPrefab, from, firePoint.transform.rotation, transform);
+        var bullet = Instantiate(bulletPrefab, from, transform.rotation);
+        bullet.GetComponent<Bullet>().collideWith = getBulletColliders();
         bullet.transform.up = -direction;
 
         StartCoroutine(lockShotWithDelay());
@@ -67,9 +51,7 @@ public class ShootAtTarget : MonoBehaviour
         yield return new WaitForSeconds(1f / shotsPerSecond);
         canShoot = true;
     }
-    
-    
-    
+
 
     private void OnDrawGizmosSelected()
     {
