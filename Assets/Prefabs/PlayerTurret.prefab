@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5468060451083191505}
   - component: {fileID: 5468060451083191506}
-  m_Layer: 14
+  m_Layer: 18
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 5468060451458715367}
   - component: {fileID: 162782782648351051}
   - component: {fileID: 887989994}
-  m_Layer: 14
+  m_Layer: 18
   m_Name: PlayerTurret
   m_TagString: PlayerTurret1
   m_Icon: {fileID: 0}
