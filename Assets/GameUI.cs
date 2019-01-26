@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
@@ -9,6 +7,7 @@ public class GameUI : MonoBehaviour
     public int currency = 0;
     public Text scoreComponentText;
     public Text currencyComponentText;
+    public PlayerController playerController;
 
     public void SetScore(int newScore)
     {
@@ -20,5 +19,11 @@ public class GameUI : MonoBehaviour
     {
         currency = newCurrency;
         currencyComponentText.text = "Currency: " + newCurrency;
+    }
+
+    public void OnClickDefence(GameObject gameObject)
+    {
+        Debug.Log("Click");
+        playerController.SetPlacingDefence(true);
     }
 }
