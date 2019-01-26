@@ -89,7 +89,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7982828711990075866}
   - component: {fileID: 7982828711990075869}
-  - component: {fileID: 7982828711990075870}
   - component: {fileID: 7982828711990075871}
   m_Layer: 0
   m_Name: Enemy Turret
@@ -161,24 +160,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7982828711990075870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7982828711990075868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e8aefce56cf4c97ae0341d7c0647cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 1
-  resetRotationWhenNoTarget: 0
-  tagFilterArray:
-  - PlayerTurret1
-  - PlayerTurret2
-  radius: 5
 --- !u!114 &7982828711990075871
 MonoBehaviour:
   m_ObjectHideFlags: 0
