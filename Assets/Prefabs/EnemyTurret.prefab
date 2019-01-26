@@ -181,7 +181,7 @@ MonoBehaviour:
   tagFilterArray:
   - PlayerTurret1
   - PlayerTurret2
-  radius: 12.78
+  radius: 21.39
 --- !u!61 &1047757433
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  stoppingDistance: 2
+  stoppingDistance: 5.71
   moveIfNoTarget: 0
   movementSmoothing: 0.15
 --- !u!114 &5954772323121609997
