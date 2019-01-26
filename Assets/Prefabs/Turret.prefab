@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927374950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalPosition: {x: 0, y: 1.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5468060451458715362}
@@ -212,7 +212,7 @@ MonoBehaviour:
   tagFilterArray:
   - Enemy1
   - Enemy2
-  radius: 12.78
+  radius: 7.07
 --- !u!61 &5468060451458715367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465bc335bb6a4ff799ba3b0525d21787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingDistance: 7
+  shootingDistance: 7.33
   bulletPrefab: {fileID: 1586411302, guid: 959655386cb15485783a30b005302e31, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 1927374951}
   shotsPerSecond: 2
   isPlayerObject: 1
