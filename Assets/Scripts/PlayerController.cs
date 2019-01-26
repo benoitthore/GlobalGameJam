@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
         instance = this;
     }
 
-    public GameObject selectedTurret;
-
+    public GameItem selectedTurret;
+    public int currency = 10;
 
     // Update is called once per frame
     void Update()
@@ -36,6 +36,11 @@ public class PlayerController : MonoBehaviour
     private void placeTurretAt(Vector3 position)
     {
         Instantiate(selectedTurret, position, Quaternion.identity);
+    }
+
+    public void SetCurrency(int amount)
+    {
+        currency = amount;
     }
 
     

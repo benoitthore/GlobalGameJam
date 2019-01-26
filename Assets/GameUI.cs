@@ -14,6 +14,11 @@ public class GameUI : MonoBehaviour
         playerController = PlayerController.instance;
     }
 
+    private void Update()
+    {
+        //if ()
+    }
+
     public void SetScore(int newScore)
     {
         score = newScore;
@@ -24,10 +29,5 @@ public class GameUI : MonoBehaviour
     {
         currency = newCurrency;
         currencyComponentText.text = "Currency: " + newCurrency;
-    }
-
-    public void OnClickDefence(GameObject gameObject)
-    {
-        playerController.selectedTurret = gameObject;
     }
 }
