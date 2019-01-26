@@ -19,7 +19,7 @@ public abstract class Targeting : MonoBehaviour
  
             float myAngle = Vector3.Angle(myDir, lookDir);
  
-            Debug.Log(myAngle);
+            
             if (myAngle < 5.0f)
             {
                 return true;

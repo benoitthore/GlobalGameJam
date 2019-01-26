@@ -3,22 +3,23 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject selectedTurret;
-    private bool isPlacingDefence = false;
+    public static PlayerController instance;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        instance = this;
     }
+
+    public GameObject selectedTurret;
+
 
     // Update is called once per frame
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current && EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (isPlacingDefence)
+        if (selectedTurret)
         {
             var mousePosition = Input.mousePosition;
             var mousePositionWorld = Camera.main.ScreenToWorldPoint(new Vector2(mousePosition.x, mousePosition.y));
@@ -27,19 +28,15 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 placeTurretAt(mousePositionWorld);
-                SetPlacingDefence(false);
+                selectedTurret = null;
             }
         }
     }
 
     private void placeTurretAt(Vector3 position)
     {
-        Debug.Log(position);
         Instantiate(selectedTurret, position, Quaternion.identity);
     }
 
-    public void SetPlacingDefence(bool isPlacing)
-    {
-        isPlacingDefence = isPlacing;
-    }
+    
 }

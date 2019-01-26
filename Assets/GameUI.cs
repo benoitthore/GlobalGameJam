@@ -9,6 +9,11 @@ public class GameUI : MonoBehaviour
     public Text currencyComponentText;
     public PlayerController playerController;
 
+    private void Awake()
+    {
+        playerController = PlayerController.instance;
+    }
+
     public void SetScore(int newScore)
     {
         score = newScore;
@@ -23,7 +28,6 @@ public class GameUI : MonoBehaviour
 
     public void OnClickDefence(GameObject gameObject)
     {
-        Debug.Log("Click");
-        playerController.SetPlacingDefence(true);
+        playerController.selectedTurret = gameObject;
     }
 }
