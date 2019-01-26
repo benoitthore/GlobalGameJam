@@ -6,6 +6,7 @@ public abstract class Targeting : MonoBehaviour
 {
     public float rotationSpeed = 1f;
     public bool resetRotationWhenNoTarget = false;
+    public bool isActive = true;
 
     public bool isPointingAtTarget()
     {
@@ -32,8 +33,13 @@ public abstract class Targeting : MonoBehaviour
     public abstract GameObject getTarget();
 
 
-    private void Update()
+    public void Update()
     {
+        if (!isActive)
+        {
+            return;
+        }
+        
         var target = getTarget();
         isPointingAtTarget();
 

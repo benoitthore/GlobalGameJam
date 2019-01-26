@@ -75,6 +75,7 @@ public class MoveTowardsTarget : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, stoppingDistance);
     }
    
