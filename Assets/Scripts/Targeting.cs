@@ -5,17 +5,13 @@ using UnityEngine;
 public abstract class Targeting : MonoBehaviour
 {
     public float rotationSpeed = 1f;
+    public bool resetRotationWhenNoTarget = false;
 
     public bool isPointingAtTarget()
     {
         var target = getTarget();
         if (target)
         {
-//            Vector2 from  = transform.position;
-//            Vector2 to = target.transform.position;
-//            Vector2 direction = new Vector2(from.x - to.x, from.y - to.y);
-
-
             Vector3 lookDir = target.transform.position - transform.position;
  
             Vector3 myDir = transform.up;
@@ -45,7 +41,7 @@ public abstract class Targeting : MonoBehaviour
         {
             aimAt(target.transform);
         }
-        else
+        else if(resetRotationWhenNoTarget)
         {
             resetRotation();
         }

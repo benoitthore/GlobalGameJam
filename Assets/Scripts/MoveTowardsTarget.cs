@@ -1,13 +1,22 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoveTowardsTarget : MonoBehaviour
 {
-    public float movementSpeed = 5f;
+    public float speed = 1f;
     public float stoppingDistance = 5f;
+
+    public bool moveIfNoTarget = true;
+
     private Rigidbody2D rigidbody2D;
     private Targeting targeting;
-    
+
+    [Range(0, .3f)] public float movementSmoothing = 0.15f;
+    private Vector2 velocity = Vector3.zero;
+
+    private const float speedMultiplier = 100f;
+
     // Start is called before the first frame update
 
     private void Start()
@@ -19,27 +28,41 @@ public class MoveTowardsTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-//        var step = Vector2.up * movementSpeed * Time.deltaTime;
-//       
-//        
-//        var currentPosition = transform.position;
-//        var target = targeting.getTarget();
-//
-//        if (target)
-//        {
-//            var targetPosition = target.transform.position;
-//
-//            // As long as we are far enough, let's move
-//            if (Vector2.Distance(currentPosition, targetPosition) > stoppingDistance)
-//            {
-//                transform.Translate(step);
-//            }
-//        }
-//        else
-//        {
-//            transform.Translate(Vector2.up);
-//        }
+        var target = targeting.getTarget();
 
+        if (!target && moveIfNoTarget)
+        {
+            move();
+            return;
+        }
+
+        if (target && Vector2.Distance(transform.position, target.transform.position) > stoppingDistance)
+        {
+            move();
+        }
+        else
+        {
+            stop();
+        }
+    }
+
+    private void move()
+    {
+        var move = speed * Time.fixedDeltaTime * speedMultiplier;
+
+        Vector2 targetVelocity = Vector2.up * move;
+        targetVelocity = transform.TransformDirection(targetVelocity);
+
+
+        rigidbody2D.velocity = Vector2.SmoothDamp(rigidbody2D.velocity, targetVelocity, ref velocity,
+            movementSmoothing);
+    }
+
+    private void stop()
+    {
+        Vector2 targetVelocity = Vector2.zero;
+        rigidbody2D.velocity = Vector2.SmoothDamp(rigidbody2D.velocity, targetVelocity, ref velocity,
+            movementSmoothing);
     }
 
     private void OnDrawGizmosSelected()
