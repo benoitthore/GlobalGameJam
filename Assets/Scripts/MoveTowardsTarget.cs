@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MoveTowardsTarget : MonoBehaviour
 {
     public float speed = 1f;
-    public float stoppingDistance = 1f;
+    public float stoppingDistance = 2f;
 
     public bool moveIfNoTarget = false;
 
@@ -16,9 +16,6 @@ public class MoveTowardsTarget : MonoBehaviour
     [Range(0, .3f)] public float movementSmoothing = 0.15f;
     private Vector2 velocity = Vector3.zero;
 
-    private const float speedMultiplier = 100f;
-
-    // Start is called before the first frame update
 
     private void Start()
     {
@@ -54,7 +51,7 @@ public class MoveTowardsTarget : MonoBehaviour
 
     private void move()
     {
-        var move = speed * Time.fixedDeltaTime * speedMultiplier;
+        var move = speed * Time.fixedDeltaTime * GameController.speedMultiplier;
 
         var direction = Vector2.up;
 

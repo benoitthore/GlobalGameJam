@@ -25,15 +25,9 @@ public class TargetingWithRadius : Targeting
 
     private bool isValidTarget(GameObject gameObject)
     {
-        foreach (var _tag in tagFilterArray)
-        {
-            if (gameObject.CompareTag(_tag))
-            {
-                return true;
-            }
-        }
 
-        return false;
+        return GameController.isObjectFromTag(gameObject, tagFilterArray);
+
     }
 
 
