@@ -37,8 +37,8 @@ public class TargetWithRadius : Targeting
     }
 
 
-    private void OnDrawGizmos()
-//    private void OnDrawGizmosSelected()
+//    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, radius);
     }
