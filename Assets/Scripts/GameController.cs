@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        instance.earth = GameObject.FindWithTag("Earth");
         if (!GameController.instance.earth)
         {
             Debug.LogError("No Earth");
