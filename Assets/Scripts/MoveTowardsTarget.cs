@@ -1,40 +1,49 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class MoveTowardsTarget : MonoBehaviour
 {
     public float movementSpeed = 5f;
     public float stoppingDistance = 5f;
-    public Vector2 startPosition = new Vector2(0, 0);
-    public Targeting targeting;
-
+    private Rigidbody2D rigidbody2D;
+    private Targeting targeting;
+    
     // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        transform.position = startPosition;
+        rigidbody2D = GetComponent<Rigidbody2D>();
+        targeting = GetComponent<Targeting>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (targeting != null)
-        {
-            var currentPosition = transform.position;
-            var targetPosition = targeting.transform.position; // TODO: Use GetTarget()
+//        var step = Vector2.up * movementSpeed * Time.deltaTime;
+//       
+//        
+//        var currentPosition = transform.position;
+//        var target = targeting.getTarget();
+//
+//        if (target)
+//        {
+//            var targetPosition = target.transform.position;
+//
+//            // As long as we are far enough, let's move
+//            if (Vector2.Distance(currentPosition, targetPosition) > stoppingDistance)
+//            {
+//                transform.Translate(step);
+//            }
+//        }
+//        else
+//        {
+//            transform.Translate(Vector2.up);
+//        }
 
-            // As long as we are far enough, let's move
-            if (Vector2.Distance(currentPosition, targetPosition) > stoppingDistance)
-            {
-                var step = movementSpeed * Time.deltaTime;
-                transform.position = Vector2.MoveTowards(currentPosition, targetPosition, step);
-            }
-            // If we are close, let's check if we are inside the collision
-            else
-            {
-                //targeting.
-                // TODO: OnCollide callback
-            }
-        }
     }
 
-
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, stoppingDistance);
+    }
 }
