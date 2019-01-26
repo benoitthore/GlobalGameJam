@@ -1,13 +1,14 @@
 ﻿using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MoveTowardsTarget : MonoBehaviour
 {
     public float speed = 1f;
-    public float stoppingDistance = 5f;
+    public float stoppingDistance = 1f;
 
-    public bool moveIfNoTarget = true;
+    public bool moveIfNoTarget = false;
 
     private Rigidbody2D rigidbody2D;
     private Targeting targeting;
@@ -22,6 +23,11 @@ public class MoveTowardsTarget : MonoBehaviour
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        if (!rigidbody2D)
+        {
+            rigidbody2D = gameObject.AddComponent<Rigidbody2D>();
+        }
+
         targeting = GetComponent<Targeting>();
     }
 
@@ -50,7 +56,9 @@ public class MoveTowardsTarget : MonoBehaviour
     {
         var move = speed * Time.fixedDeltaTime * speedMultiplier;
 
-        Vector2 targetVelocity = Vector2.up * move;
+        var direction = Vector2.up;
+
+        Vector2 targetVelocity = direction * move;
         targetVelocity = transform.TransformDirection(targetVelocity);
 
 
@@ -69,4 +77,6 @@ public class MoveTowardsTarget : MonoBehaviour
     {
         Gizmos.DrawWireSphere(transform.position, stoppingDistance);
     }
+   
+   
 }
