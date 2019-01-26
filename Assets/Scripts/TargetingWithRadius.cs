@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetWithRadius : Targeting
+public class TargetingWithRadius : Targeting
 {
     [TagSelector] public string[] tagFilterArray;
     
@@ -40,6 +40,7 @@ public class TargetWithRadius : Targeting
 //    private void OnDrawGizmos()
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
