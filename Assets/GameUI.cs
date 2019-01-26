@@ -17,14 +17,14 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
+        if (score != PlayerController.instance.score)
+        {
+            SetScore(PlayerController.instance.score);
+        }
+
         if (currency != PlayerController.instance.currency)
         {
             SetCurrency(PlayerController.instance.currency);
-        }
-
-        if (score != PlayerController.instance.score)
-        {
-            SetCurrency(PlayerController.instance.score);
         }
     }
 
