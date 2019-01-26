@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*\
+ TODO Review ARCHITECTURE for targeting, then refactor if not too much work
+ */
 public class MultiTargeting : Targeting
 {
     private TargetingPredefined targetingPredefined;
@@ -19,9 +23,10 @@ public class MultiTargeting : Targeting
         targetingPredefined = gameObject.AddComponent<TargetingPredefined>();
         targetingWithRadius = gameObject.AddComponent<TargetingWithRadius>();
 
-        targetingPredefined.isActive = false;
-        targetingWithRadius.isActive = false;
+        targetingPredefined.enabled = false;
+        targetingWithRadius.enabled = false;
     }
+
 
     private void Update()
     {
