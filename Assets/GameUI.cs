@@ -3,20 +3,29 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
-    public int score = 0;
-    public int currency = 0;
     public Text scoreComponentText;
     public Text currencyComponentText;
-    public PlayerController playerController;
 
-    private void Awake()
+    private int score;
+    private int currency;
+
+    private void Start()
     {
-        playerController = PlayerController.instance;
+        SetScore(PlayerController.instance.score);
+        SetCurrency(PlayerController.instance.currency);
     }
 
     private void Update()
     {
-        //if ()
+        if (currency != PlayerController.instance.currency)
+        {
+            SetCurrency(PlayerController.instance.currency);
+        }
+
+        if (score != PlayerController.instance.score)
+        {
+            SetCurrency(PlayerController.instance.score);
+        }
     }
 
     public void SetScore(int newScore)

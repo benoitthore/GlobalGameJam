@@ -5,14 +5,8 @@ public class ActionButton : MonoBehaviour
 {
     public Image image;
     public GameItem gameItem;
-    public PlayerController playerController;
 
     private Button button;
-
-    private void Awake()
-    {
-        playerController = PlayerController.instance;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,22 +18,19 @@ public class ActionButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerController)
+        // Make button work or not depending on currency
+        if (button.IsInteractable() && PlayerController.instance.currency < gameItem.price)
         {
-            // Make button work or not depending on currency
-            if (button.IsInteractable() && playerController.currency < gameItem.price)
-            {
-                button.interactable = false;
-            }
-            else if (!button.IsInteractable() && playerController.currency >= gameItem.price)
-            {
-                button.interactable = true;
-            }
+            button.interactable = false;
+        }
+        else if (!button.IsInteractable() && PlayerController.instance.currency >= gameItem.price)
+        {
+            button.interactable = true;
         }
     }
 
     public void OnClick()
     {
-        playerController.selectedTurret = gameItem;
+        PlayerController.instance.selectedTurret = gameItem;
     }
 }

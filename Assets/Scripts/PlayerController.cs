@@ -10,7 +10,13 @@ public class PlayerController : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        instance = this;
+    }
+
     public GameItem selectedTurret;
+    public int score = 0;
     public int currency = 10;
 
     // Update is called once per frame
@@ -28,6 +34,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 placeTurretAt(mousePositionWorld);
+                SetCurrency(currency - selectedTurret.price);
                 selectedTurret = null;
             }
         }
@@ -41,6 +48,11 @@ public class PlayerController : MonoBehaviour
     public void SetCurrency(int amount)
     {
         currency = amount;
+    }
+
+    public void SetScore(int amount)
+    {
+        score = amount;
     }
 
     

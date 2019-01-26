@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -186,12 +186,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1525308695}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3589814580997419687, guid: 5008d2adb5590e542bddf93632dc54c0,
         type: 3}
       propertyPath: m_Name
-      value: ActionBar
+      value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 3589814580997419611, guid: 5008d2adb5590e542bddf93632dc54c0,
         type: 3}
@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 3589814580997419611, guid: 5008d2adb5590e542bddf93632dc54c0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3589814580997419611, guid: 5008d2adb5590e542bddf93632dc54c0,
         type: 3}
@@ -545,12 +545,6 @@ PrefabInstance:
       objectReference: {fileID: 1337208144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5008d2adb5590e542bddf93632dc54c0, type: 3}
---- !u!224 &399588144 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3589814580997419611, guid: 5008d2adb5590e542bddf93632dc54c0,
-    type: 3}
-  m_PrefabInstance: {fileID: 399588143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &436384003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -781,6 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTurret: {fileID: 0}
+  score: 0
   currency: 10
 --- !u!4 &739373741
 Transform:
@@ -1219,37 +1214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43b94f0ac8a20841a528a4662519c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1525308694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1525308695}
-  m_Layer: 0
-  m_Name: UI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1525308695
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525308694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 264.65533, y: 140.80298, z: 11.368995}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 399588144}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781599830
 GameObject:
   m_ObjectHideFlags: 0
