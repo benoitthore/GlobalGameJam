@@ -24,14 +24,17 @@ public class ActionButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Make button work or not depending on currency
-        if (button.IsInteractable() && playerController.currency < gameItem.price)
+        if (playerController)
         {
-            button.interactable = false;
-        }
-        else if (!button.IsInteractable() && playerController.currency >= gameItem.price)
-        {
-            button.interactable = true;
+            // Make button work or not depending on currency
+            if (button.IsInteractable() && playerController.currency < gameItem.price)
+            {
+                button.interactable = false;
+            }
+            else if (!button.IsInteractable() && playerController.currency >= gameItem.price)
+            {
+                button.interactable = true;
+            }
         }
     }
 
