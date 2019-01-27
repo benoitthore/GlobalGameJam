@@ -4,14 +4,12 @@ public class Healthbar : MonoBehaviour
 {
     public Transform innerBar;
     public Health health;
-    private float originalScale;
-    
-    
+    private Vector3 originalScale;
 
 
     private void Start()
     {
-        originalScale = innerBar.localScale.x;
+        originalScale = innerBar.localScale;
     }
 
     private void Update()
@@ -22,6 +20,6 @@ public class Healthbar : MonoBehaviour
 
     public void SetHealth(float value)
     {
-        innerBar.localScale = new Vector3(value * originalScale, 1, 1);
+        innerBar.localScale = new Vector3(value * originalScale.x, originalScale.y, originalScale.z);
     }
 }
