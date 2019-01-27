@@ -44,6 +44,7 @@ public class ShootAtTarget : MonoBehaviour
         var bullet = Instantiate(bulletPrefab, from, transform.rotation);
         bullet.GetComponent<Bullet>().collideWith = targeting.getTargetTags();
         bullet.transform.up = -direction;
+        gunshotSound.volume = 0.1f;
         gunshotSound.Play();
 
         StartCoroutine(lockShotWithDelay());

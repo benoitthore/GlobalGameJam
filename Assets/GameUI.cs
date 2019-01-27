@@ -20,7 +20,11 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        healthbarComponent.health = GameController.instance.earth.GetComponent<Health>();
+        if (healthbarComponent && GameController.instance.earth)
+        {
+            healthbarComponent.health = GameController.instance.earth.GetComponent<Health>();
+        }
+
         if (score != PlayerController.instance.score)
         {
             SetScore(PlayerController.instance.score);
