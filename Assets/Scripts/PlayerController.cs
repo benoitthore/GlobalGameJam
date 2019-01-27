@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
+    public GameObject gameUI;
+    public GameObject gameOverScreen;
 
     private void Awake()
     {
@@ -12,8 +14,10 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        // Freeze everything in the bg
+        // Reset game over UI
         Time.timeScale = 1.0f;
+        gameUI.SetActive(true);
+        gameOverScreen.SetActive(false);
 
         instance = this;
     }
