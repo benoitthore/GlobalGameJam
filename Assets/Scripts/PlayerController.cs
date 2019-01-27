@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        // Freeze everything in the bg
+        Time.timeScale = 1.0f;
+
         instance = this;
     }
 
