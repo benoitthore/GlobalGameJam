@@ -1,16 +1,26 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    public GameOverScreen gameOverScreen;
+    public GameObject gameOverScreen;
+    public GameObject prefab;
+    public float waitingTime = 2f;
 
     private void Start()
     {
-        gameOverScreen.ToggleScreen(true);
+        gameOverScreen.SetActive(false);
+        StartCoroutine(endGame());
     }
 
-    private void Update()
+    IEnumerator endGame()
     {
-        Debug.Log("GameOver");
+        if (prefab)
+        {
+            Instantiate(prefab, transform.position, transform.rotation);
+            yield return new WaitForSeconds(waitingTime);
+        }
+
+        gameOverScreen.SetActive(true);
     }
 }
