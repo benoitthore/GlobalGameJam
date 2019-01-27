@@ -5,7 +5,23 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
    [SerializeField] private float health = 100f;
+   private float maxHealth;
    public GameObject deathEffect;
+
+   public float getHealth()
+   {
+      return health;
+   }
+   
+   public float getMaxHealth()
+   {
+      return maxHealth;
+   }
+
+   private void Start()
+   {
+      maxHealth = health;
+   }
 
    public void takeDamage(float damage)
    {

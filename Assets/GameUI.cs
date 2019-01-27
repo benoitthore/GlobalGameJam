@@ -9,7 +9,7 @@ public class GameUI : MonoBehaviour
 
     private int score;
     private int currency;
-    private float health = 100f;
+    private float health = 1f;
 
     private void Start()
     {
@@ -30,11 +30,10 @@ public class GameUI : MonoBehaviour
             SetCurrency(PlayerController.instance.currency);
         }
 
-        // Test
-        if (health > 0)
+        var earthHealth = GameController.instance.earth.GetComponent<Health>();
+        if (health != earthHealth.getHealth())
         {
-            health -= 0.1f;
-            healthbarComponent.SetHealth(health);
+            healthbarComponent.SetHealth(earthHealth.getHealth() / earthHealth.getMaxHealth());
         }
     }
 
