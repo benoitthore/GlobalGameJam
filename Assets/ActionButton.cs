@@ -32,6 +32,7 @@ public class ActionButton : MonoBehaviour
     public void OnClick()
     {
         PlayerController.instance.selectedTurret = gameItem;
-        Cursor.SetCursor(image.sprite.texture, Vector2.zero, CursorMode.Auto);
+        //var texture = image.sprite.texture;
+        //Cursor.SetCursor(image.sprite.texture, Vector2.zero, CursorMode.Auto);
     }
 }
