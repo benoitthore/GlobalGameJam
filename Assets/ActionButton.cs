@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ActionButton : MonoBehaviour
 {
     public Image image;
     public GameItem gameItem;
+    public Sprite cursor;
 
     private Button button;
 
@@ -32,7 +34,6 @@ public class ActionButton : MonoBehaviour
     public void OnClick()
     {
         PlayerController.instance.selectedTurret = gameItem;
-        //var texture = image.sprite.texture;
-        //Cursor.SetCursor(image.sprite.texture, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursor.texture, Vector2.zero, CursorMode.Auto);
     }
 }
