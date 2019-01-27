@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb6dab9cd7449889f54556b8a44b3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.5
   stoppingDistance: 4.71
   moveIfNoTarget: 0
   movementSmoothing: 0.15
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e842a7a1d62a4def9384a05054f024fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 10
+  currency: 2
   score: 10
 --- !u!1 &5341945941738997544
 GameObject:

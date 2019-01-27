@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43b94f0ac8a20841a528a4662519c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 20
+  price: 25
   prefab: {fileID: 2059426324717738909, guid: 63eba482c59264f3bb40f2ca0548a528, type: 3}
 --- !u!222 &5508620334777457160
 CanvasRenderer:

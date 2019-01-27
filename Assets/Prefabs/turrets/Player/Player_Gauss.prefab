@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961e6e9164ba4b64bc73ece47c734e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 400
   deathEffect: {fileID: 0}
 --- !u!114 &6401890118890659304
 MonoBehaviour:
@@ -281,5 +281,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingDistance: 7.12
   bulletPrefab: {fileID: 1586411302, guid: 959655386cb15485783a30b005302e31, type: 3}
-  shotsPerSecond: 2
+  shotsPerSecond: 1
   gunshotSound: {fileID: 2145165588656834392}

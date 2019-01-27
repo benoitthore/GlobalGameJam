@@ -281,5 +281,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingDistance: 7.12
   bulletPrefab: {fileID: 1586411302, guid: 959655386cb15485783a30b005302e31, type: 3}
-  shotsPerSecond: 2
+  shotsPerSecond: 3
   gunshotSound: {fileID: 1656474084794324120}
