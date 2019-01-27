@@ -4,14 +4,27 @@ using UnityEngine;
 
 public class TargetingWithRadius : Targeting
 {
-    [TagSelector] public string[] tagFilterArray;
+    public bool attackPlayer;
+
+    
+    public string[] getTargetTags()
+    {
+        return attackPlayer ? GameController.instance.tagPlayerFilter : GameController.instance.tagEnemyFilter;
+    }
+
+    
+    public GameObject getPredefinedTarget()
+    {
+        return attackPlayer ? GameController.instance.earth : null;
+    }
+
+    
 
     public float radius = 5f;
 
     protected GameObject lastTarget;
 
-    
-    
+
     public override GameObject getTarget()
     {
         var inCircleList = Physics2D.OverlapCircleAll(transform.position, radius);
@@ -35,6 +48,12 @@ public class TargetingWithRadius : Targeting
         }
 
         lastTarget = returnedTarget;
+
+        if (!returnedTarget)
+        {
+           return getPredefinedTarget();
+        }
+
         return returnedTarget;
     }
 
@@ -45,7 +64,7 @@ public class TargetingWithRadius : Targeting
         foreach (var target in possibleTargets)
         {
             Vector3 lookDir = target.transform.position - transform.position;
- 
+
             Vector3 myDir = transform.up;
 
             if (smallestAngle > Vector3.Angle(myDir, lookDir))
@@ -59,7 +78,7 @@ public class TargetingWithRadius : Targeting
 
     private bool isValidTarget(GameObject gameObject)
     {
-        return GameController.isObjectFromTag(gameObject, tagFilterArray);
+        return GameController.isObjectFromTag(gameObject, getTargetTags());
     }
 
 

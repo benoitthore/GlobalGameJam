@@ -7,6 +7,7 @@ public abstract class Targeting : MonoBehaviour
     public float rotationSpeed = 1f;
     public bool resetRotationWhenNoTarget = false;
 
+    
     public bool isPointingAtTarget()
     {
         var target = getTarget();

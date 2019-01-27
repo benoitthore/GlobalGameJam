@@ -10,16 +10,18 @@ public class ShootAtTarget : MonoBehaviour
 
     private bool canShoot = true;
 
-    public bool isPlayerObject;
+    private TargetingWithRadius targeting;
 
-    private string[] getBulletColliders()
+    private void Start()
     {
-        return isPlayerObject ? GameController.instance.tagEnemyFilter : GameController.instance.tagPlayerFilter;
+        targeting = GetComponent<TargetingWithRadius>();
     }
+
+   
 
     private void Update()
     {
-        var targeting = GetComponent<Targeting>();
+        
         var target = targeting.getTarget();
         if (target
             && canShoot
@@ -39,7 +41,7 @@ public class ShootAtTarget : MonoBehaviour
 
 
         var bullet = Instantiate(bulletPrefab, from, transform.rotation);
-        bullet.GetComponent<Bullet>().collideWith = getBulletColliders();
+        bullet.GetComponent<Bullet>().collideWith = targeting.getTargetTags();
         bullet.transform.up = -direction;
 
         StartCoroutine(lockShotWithDelay());
