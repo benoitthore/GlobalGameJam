@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameItem selectedTurret;
     public int score = 0;
     public int currency = 10;
-
+    
+    
     // Update is called once per frame
     void Update()
     {
@@ -33,16 +34,16 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
-                placeTurretAt(mousePositionWorld);
+                placeTurretAt(selectedTurret.prefab,mousePositionWorld);
                 SetCurrency(currency - selectedTurret.price);
                 selectedTurret = null;
             }
         }
     }
 
-    private void placeTurretAt(Vector3 position)
+    private void placeTurretAt(GameObject turret,Vector3 position)
     {
-        Instantiate(selectedTurret, position, Quaternion.identity);
+        Instantiate(turret, position, Quaternion.identity);
     }
 
     public void SetCurrency(int amount)

@@ -9,6 +9,7 @@ TagManager:
   - PlayerTurret2
   - Enemy1
   - Enemy2
+  - Earth
   layers:
   - Default
   - TransparentFX
@@ -18,17 +19,17 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Obstacle
   - 
   - 
   - 
   - 
   - 
+  - Bullets
   - 
   - 
   - 
   - 
+  - Turrets
   - 
   - 
   - 

@@ -5,6 +5,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
 
+    public GameObject earth;
     public const float speedMultiplier = 100f;
 
     [TagSelector] public string[] tagPlayerFilter;
@@ -13,6 +14,11 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        instance.earth = GameObject.FindWithTag("Earth");
+        if (!GameController.instance.earth)
+        {
+            Debug.LogError("No Earth");
+        }
     }
 
     public static bool isObjectFromTag(GameObject gameObject, string[] tags)
