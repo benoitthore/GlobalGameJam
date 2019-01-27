@@ -14,7 +14,10 @@ public class Healthbar : MonoBehaviour
 
     private void Update()
     {
-        SetHealth(health.getHealth() / health.getMaxHealth());
+        if (health)
+        {
+            SetHealth(health.getHealth() / health.getMaxHealth());
+        }
     }
 
 
