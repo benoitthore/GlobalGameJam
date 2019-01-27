@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 placeTurretAt(selectedTurret.prefab,mousePositionWorld);
+                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
                 SetCurrency(currency - selectedTurret.price);
                 selectedTurret = null;
             }
