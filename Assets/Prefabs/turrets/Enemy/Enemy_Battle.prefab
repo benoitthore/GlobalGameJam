@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961e6e9164ba4b64bc73ece47c734e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 150
   deathEffect: {fileID: 0}
 --- !u!114 &2156627772814293371
 MonoBehaviour:
@@ -314,5 +314,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e842a7a1d62a4def9384a05054f024fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 10
+  currency: 3
   score: 10

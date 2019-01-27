@@ -122,17 +122,17 @@ PrefabInstance:
     - target: {fileID: 5100191824166544305, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_Name
-      value: EnemySpwaner (2)
+      value: EnemySpwaner Gargantua
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.076408
+      value: -33.3
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.732121
+      value: 22.8
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
@@ -1324,17 +1324,17 @@ PrefabInstance:
     - target: {fileID: 5100191824166544305, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_Name
-      value: EnemySpwaner (1)
+      value: EnemySpwaner LightSpeeder
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.547665
+      value: 32.1
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.139435
+      value: -26.1
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
@@ -1752,17 +1752,17 @@ PrefabInstance:
     - target: {fileID: 5100191824166544305, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_Name
-      value: EnemySpwaner
+      value: EnemySpwaner Kamikase
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.452667
+      value: -35.5
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.426558
+      value: -26.1
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
@@ -1964,17 +1964,17 @@ PrefabInstance:
     - target: {fileID: 5100191824166544305, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_Name
-      value: EnemySpwaner (3)
+      value: EnemySpwaner Battle
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.250614
+      value: 24.9
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.177661
+      value: 23.2
       objectReference: {fileID: 0}
     - target: {fileID: 5100191824166544307, guid: 7271bbbc7d39746afa55bc2bbbb7fa19,
         type: 3}
