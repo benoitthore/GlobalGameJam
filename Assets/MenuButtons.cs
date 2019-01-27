@@ -5,7 +5,7 @@ public class MenuButtons : MonoBehaviour
 {
     public void OnClickStart()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main2");
     }
 
     public void OnClickCredits()

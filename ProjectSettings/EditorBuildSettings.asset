@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Menu.unity
     guid: 07ffcf1170b1c854a9a6e21e7c3e89d9
   - enabled: 1
-    path: Assets/Main.unity
-    guid: edd814ee95dbeb942885fdb48a50b318
-  - enabled: 1
     path: Assets/Credits.unity
     guid: a0449bb9c1bf69743a054a45c253c36e
+  - enabled: 1
+    path: Assets/Main2.unity
+    guid: caf62e1ba91174ed9955c6fe09cd87cd
   m_configObjects: {}
