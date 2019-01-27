@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     public GameObject gameUI;
+    public AudioSource gameMusic;
+    public AudioSource gameOverMusic;
 
     private void Awake()
     {
@@ -16,6 +18,7 @@ public class PlayerController : MonoBehaviour
         // Reset game over UI
         Time.timeScale = 1;
         ToggleUI(true);
+        PlayGameMusic();
 
         instance = this;
     }
@@ -65,6 +68,20 @@ public class PlayerController : MonoBehaviour
     public void ToggleUI(bool visible)
     {
         gameUI.SetActive(visible);
+    }
+
+    public void PlayGameMusic()
+    {
+        gameOverMusic.Stop();
+        gameMusic.time = 0;
+        gameMusic.Play();
+    }
+
+    public void PlayGameOverMusic()
+    {
+        gameMusic.Stop();
+        gameOverMusic.time = 0;
+        gameOverMusic.Play();
     }
 
     

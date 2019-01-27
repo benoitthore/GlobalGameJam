@@ -19,12 +19,15 @@ public class GameOverScreen : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void ToggleScreen(bool visible)
+    public void Update()
     {
-        PlayerController.instance.ToggleUI(!visible);
-        SetScore(PlayerController.instance.score);
+        var playerInstance = PlayerController.instance;
 
-        Time.timeScale = visible ? 0 : 1;
+        playerInstance.PlayGameOverMusic();
+        playerInstance.ToggleUI(false);
+        SetScore(playerInstance.score);
+
+        Time.timeScale = 0;
     }
 
     public void SetScore(int score)

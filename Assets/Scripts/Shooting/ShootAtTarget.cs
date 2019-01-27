@@ -7,6 +7,7 @@ public class ShootAtTarget : MonoBehaviour
     public float shootingDistance = 7f;
     public GameObject bulletPrefab;
     public float shotsPerSecond = 1f;
+    public AudioSource gunshotSound;
 
     private bool canShoot = true;
 
@@ -43,6 +44,7 @@ public class ShootAtTarget : MonoBehaviour
         var bullet = Instantiate(bulletPrefab, from, transform.rotation);
         bullet.GetComponent<Bullet>().collideWith = targeting.getTargetTags();
         bullet.transform.up = -direction;
+        gunshotSound.Play();
 
         StartCoroutine(lockShotWithDelay());
     }
