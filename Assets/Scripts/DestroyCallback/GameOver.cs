@@ -14,4 +14,9 @@ public class GameOver : MonoBehaviour
 
         Time.timeScale = 0f;
     }
+
+    private void Update()
+    {
+        Debug.Log("GameOver");
+    }
 }
