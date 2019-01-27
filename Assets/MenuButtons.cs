@@ -3,15 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-
     public void OnClickStart()
     {
         SceneManager.LoadScene("Main");
-    }
-
-    public void OnClickOptions()
-    {
-        SceneManager.LoadScene("Options");
     }
 
     public void OnClickCredits()
