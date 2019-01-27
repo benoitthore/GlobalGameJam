@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GameOverScreen : MonoBehaviour
 {
     public Text scoreText;
+    public GameObject gameOverScreen;
 
     public void OnRestart()
     {
@@ -16,6 +17,14 @@ public class GameOverScreen : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene("Menu");
+    }
+
+    public void ToggleScreen(bool visible)
+    {
+        PlayerController.instance.ToggleUI(!visible);
+        SetScore(PlayerController.instance.score);
+
+        Time.timeScale = visible ? 0 : 1;
     }
 
     public void SetScore(int score)
