@@ -1,15 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
+    public GameObject gameUI;
+    public GameObject gameOverScreenObject;
+    public GameOverScreen gameOverScreenScript;
+
     private void Start()
     {
-        
-//        Scene scene = SceneManager.GetActiveScene();
-//        SceneManager.LoadScene(scene.name);
+        // Freeze everything in the bg
+        Time.timeScale = 0f;
+
+        gameUI.SetActive(false);
+        gameOverScreenObject.SetActive(true);
+        gameOverScreenScript.SetScore(PlayerController.instance.score);
     }
 
     private void Update()
