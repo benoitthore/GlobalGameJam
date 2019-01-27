@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
    {
       if (deathEffect)
       {
-         Instantiate(deathEffect);
+         Instantiate(deathEffect,transform.position,transform.rotation);
       }
       Destroy(gameObject);
    }

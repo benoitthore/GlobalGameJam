@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2283241019987601114}
   - component: {fileID: 2156627772814293371}
   - component: {fileID: 8619336076504320727}
+  - component: {fileID: 4964804293319488833}
   m_Layer: 18
   m_Name: Enemy_Battle
   m_TagString: Enemy1
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6201339632659255671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.67, y: -6.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -153,7 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingDistance: 7.12
-  bulletPrefab: {fileID: 1586411302, guid: 959655386cb15485783a30b005302e31, type: 3}
+  bulletPrefab: {fileID: 7925305982367085637, guid: 80776528165aa457c821ac355b33fa45,
+    type: 3}
   shotsPerSecond: 2
 --- !u!114 &8619336076504320727
 MonoBehaviour:
@@ -171,3 +173,17 @@ MonoBehaviour:
   stoppingDistance: 4.71
   moveIfNoTarget: 0
   movementSmoothing: 0.15
+--- !u!114 &4964804293319488833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6201339632659255671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e842a7a1d62a4def9384a05054f024fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currency: 10
+  score: 10
