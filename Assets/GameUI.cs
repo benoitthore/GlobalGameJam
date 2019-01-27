@@ -15,11 +15,12 @@ public class GameUI : MonoBehaviour
     {
         SetScore(PlayerController.instance.score);
         SetCurrency(PlayerController.instance.currency);
-        healthbarComponent.SetHealth(100); // Set actual health
+        
     }
 
     private void Update()
     {
+        healthbarComponent.health = GameController.instance.earth.GetComponent<Health>();
         if (score != PlayerController.instance.score)
         {
             SetScore(PlayerController.instance.score);
@@ -30,11 +31,6 @@ public class GameUI : MonoBehaviour
             SetCurrency(PlayerController.instance.currency);
         }
 
-        var earthHealth = GameController.instance.earth.GetComponent<Health>();
-        if (health != earthHealth.getHealth())
-        {
-            healthbarComponent.SetHealth(earthHealth.getHealth() / earthHealth.getMaxHealth());
-        }
     }
 
     public void SetScore(int newScore)
