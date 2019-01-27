@@ -1297,7 +1297,7 @@ MonoBehaviour:
   gameUI: {fileID: 627963246}
   selectedTurret: {fileID: 0}
   score: 0
-  currency: 10
+  currency: 100
 --- !u!4 &739373741
 Transform:
   m_ObjectHideFlags: 0
@@ -1885,7 +1885,7 @@ PrefabInstance:
     - target: {fileID: 5284100552179160711, guid: c86c45f9af5e64015a58f5cae8ec96cd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5284100552179160711, guid: c86c45f9af5e64015a58f5cae8ec96cd,
         type: 3}
@@ -1935,7 +1935,7 @@ PrefabInstance:
     - target: {fileID: 5284100552179160697, guid: c86c45f9af5e64015a58f5cae8ec96cd,
         type: 3}
       propertyPath: health
-      value: 1
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c86c45f9af5e64015a58f5cae8ec96cd, type: 3}
