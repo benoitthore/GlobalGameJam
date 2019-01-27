@@ -5,7 +5,6 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     public GameObject gameUI;
-    public GameObject gameOverScreen;
 
     private void Awake()
     {
@@ -15,9 +14,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         // Reset game over UI
-        Time.timeScale = 1.0f;
-        gameUI.SetActive(true);
-        gameOverScreen.SetActive(false);
+        Time.timeScale = 1;
+        ToggleUI(true);
 
         instance = this;
     }
@@ -61,6 +59,11 @@ public class PlayerController : MonoBehaviour
     public void SetScore(int amount)
     {
         score = amount;
+    }
+
+    public void ToggleUI(bool visible)
+    {
+        gameUI.SetActive(visible);
     }
 
     
