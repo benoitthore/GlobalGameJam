@@ -7,8 +7,13 @@ public class GameOver : MonoBehaviour
 {
     private void Start()
     {
-        Debug.Log("GameOver");
+        
 //        Scene scene = SceneManager.GetActiveScene();
 //        SceneManager.LoadScene(scene.name);
+    }
+
+    private void Update()
+    {
+        Debug.Log("GameOver");
     }
 }
