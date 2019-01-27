@@ -1305,7 +1305,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameItem
       value: 
-      objectReference: {fileID: 843426963319179577, guid: a51e2750e9833f446a51bc16e158570b,
+      objectReference: {fileID: 843426963319179577, guid: 80a02c5847d56a44bae82a8f4961b15e,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ff9c0150441f494b9ce52d6a0889009, type: 3}
@@ -1765,7 +1765,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameItem
       value: 
-      objectReference: {fileID: 843426963319179577, guid: a8ec6cbcfb7670742b5c0c60d021c189,
+      objectReference: {fileID: 843426963319179577, guid: a51e2750e9833f446a51bc16e158570b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ff9c0150441f494b9ce52d6a0889009, type: 3}
@@ -1896,7 +1896,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameItem
       value: 
-      objectReference: {fileID: 843426963319179577, guid: 80a02c5847d56a44bae82a8f4961b15e,
+      objectReference: {fileID: 843426963319179577, guid: a8ec6cbcfb7670742b5c0c60d021c189,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ff9c0150441f494b9ce52d6a0889009, type: 3}
