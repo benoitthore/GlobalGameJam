@@ -180,7 +180,7 @@ MonoBehaviour:
   tagFilterArray:
   - Enemy1
   - Enemy2
-  radius: 7.07
+  radius: 7.03
 --- !u!61 &5468060451458715367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465bc335bb6a4ff799ba3b0525d21787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingDistance: 10
+  shootingDistance: 7.12
   bulletPrefab: {fileID: 1586411302, guid: 959655386cb15485783a30b005302e31, type: 3}
   shotsPerSecond: 2
   isPlayerObject: 1
