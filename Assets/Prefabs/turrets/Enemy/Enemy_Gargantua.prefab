@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961e6e9164ba4b64bc73ece47c734e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 350
   deathEffect: {fileID: 0}
 --- !u!114 &2992003495610090690
 MonoBehaviour:
@@ -157,7 +157,7 @@ MonoBehaviour:
   shootingDistance: 7.12
   bulletPrefab: {fileID: 7925305982367085637, guid: 80776528165aa457c821ac355b33fa45,
     type: 3}
-  shotsPerSecond: 0.5
+  shotsPerSecond: 0.3
   gunshotSound: {fileID: 2285175619724371031}
 --- !u!114 &2992003495610090689
 MonoBehaviour:
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e842a7a1d62a4def9384a05054f024fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 5
+  currency: 10
   score: 10
 --- !u!1 &6062484196679218952
 GameObject:

@@ -157,7 +157,7 @@ MonoBehaviour:
   shootingDistance: 7.12
   bulletPrefab: {fileID: 7925305982367085637, guid: 80776528165aa457c821ac355b33fa45,
     type: 3}
-  shotsPerSecond: 2
+  shotsPerSecond: 0.8
   gunshotSound: {fileID: 7766249891893854582}
 --- !u!114 &1265569308293881675
 MonoBehaviour:
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e842a7a1d62a4def9384a05054f024fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 2
-  score: 10
+  currency: 7
+  score: 7
 --- !u!1 &5341945941738997544
 GameObject:
   m_ObjectHideFlags: 0
